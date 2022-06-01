@@ -1,1 +1,1 @@
-# cw2 backend
+# cw2 frontend
