@@ -157,7 +157,7 @@ var app = new Vue({
 
     // Logic to fetch lists from heroku
     fetchLessons: function () {
-      fetch(`https://cst3145-cw2-1.herokuapp.com/collection/lessons`)
+      fetch(`https://cst3145-cw2-1.herokuapp.com/collection/activities`)
         .then((res) => {
           return res.json();
         })
@@ -173,7 +173,7 @@ var app = new Vue({
     // Logic to filter using express in back end
     filterLessons: function () {
       fetch(
-        `https://cst3145-cw2-1.herokuapp.com/collection/lessons/search?filter=${this.search_keyword}`
+        `https://cst3145-cw2-1.herokuapp.com/collection/activities/search?filter=${this.search_keyword}`
       )
         .then((res) => {
           return res.json();
@@ -202,7 +202,7 @@ var app = new Vue({
         }
       }
       let spaces_upd_string = JSON.stringify(spaces_upd);
-      fetch("https://cst3145-cw2-1.herokuapp.com/collection/lessons", {
+      fetch("https://cst3145-cw2-1.herokuapp.com/collection/activities", {
         method: "PUT",
         body: spaces_upd_string,
         headers: {
